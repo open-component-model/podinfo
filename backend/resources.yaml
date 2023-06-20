@@ -1,0 +1,20 @@
+name: config
+type: configdata.ocm.software
+input:
+  type: file
+  mediaType: application/yaml
+  path: ./configdata.yaml
+---
+name: image
+relation: external
+type: ociImage
+version: 6.2.0
+access:
+  type: ociArtifact
+  imageReference: ghcr.io/stefanprodan/podinfo:6.2.0
+---
+name: manifests
+type: Directory
+input:
+  type: dir
+  path: ./manifests
