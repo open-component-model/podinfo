@@ -1,0 +1,94 @@
+components:
+# -- product component
+- name: ocm.software/podinfo
+  version: 1.0.2
+  provider:
+    name: open-component-model
+  componentReferences:
+  - name: backend
+    componentName: ocm.software/podinfo/backend
+    version: 1.0.0
+  - name: frontend
+    componentName: ocm.software/podinfo/frontend
+    version: 1.0.0
+  - name: redis
+    componentName: ocm.software/redis
+    version: 1.0.0
+# -- backend component
+- name: ocm.software/podinfo/backend
+  version: 1.0.0
+  provider:
+    name: open-component-model
+  resources:
+  - name: config
+    type: configdata.ocm.software
+    input:
+      type: file
+      mediaType: application/yaml
+      path: backend/config.yaml
+      compress: true
+  - name: image
+    relation: external
+    type: ociImage
+    version: 6.2.0
+    access:
+      type: ociArtifact
+      imageReference: ghcr.io/stefanprodan/podinfo:6.2.0
+  - name: manifests
+    type: kustomize.ocm.fluxcd.io
+    input:
+      type: dir
+      path: backend/manifests
+      compress: true
+# -- frontend component
+- name: ocm.software/podinfo/frontend
+  version: 1.0.0
+  provider:
+    name: open-component-model
+  resources:
+  - name: config
+    type: configdata.ocm.software
+    input:
+      type: file
+      mediaType: application/yaml
+      path: frontend/config.yaml
+      compress: true
+  - name: image
+    relation: external
+    type: ociImage
+    version: 6.2.0
+    access:
+      type: ociArtifact
+      imageReference: ghcr.io/stefanprodan/podinfo:6.2.0
+  - name: manifests
+    type: kustomize.ocm.fluxcd.io
+    input:
+      type: dir
+      path: frontend/manifests
+      compress: true
+# -- redis component
+- name: ocm.software/redis
+  version: 1.0.0
+  provider:
+    name: open-component-model
+  resources:
+  - name: config
+    type: configdata.ocm.software
+    input:
+      type: file
+      mediaType: application/yaml
+      path: redis/config.yaml
+      compress: true
+  - name: image
+    relation: external
+    type: ociImage
+    version: 6.0.1
+    access:
+      type: ociArtifact
+      imageReference: redis:6.0.1
+  - name: manifests
+    type: kustomize.ocm.fluxcd.io
+    input:
+      type: dir
+      path: redis/manifests
+      compress: true
