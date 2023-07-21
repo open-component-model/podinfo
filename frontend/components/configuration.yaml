@@ -1,0 +1,21 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: Configuration
+metadata:
+  name: frontend-configuration
+  namespace: ocm-system
+spec:
+  configRef:
+    kind: ComponentVersion
+    name: podinfocomponent-version
+    namespace: ocm-system
+    resourceRef:
+      name: config
+      referencePath:
+      - name: frontend
+      version: 1.0.0
+  interval: 10m0s
+  sourceRef:
+    apiVersion: delivery.ocm.software/v1alpha1
+    kind: Localization
+    name: frontend-localization
+    namespace: ocm-system

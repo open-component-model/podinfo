@@ -1,0 +1,25 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: Localization
+metadata:
+  name: redis-localization
+  namespace: ocm-system
+spec:
+  configRef:
+    kind: ComponentVersion
+    name: podinfocomponent-version
+    namespace: ocm-system
+    resourceRef:
+      name: config
+      referencePath:
+      - name: redis
+      version: 1.0.0
+  interval: 10m0s
+  sourceRef:
+    kind: ComponentVersion
+    name: podinfocomponent-version
+    namespace: ocm-system
+    resourceRef:
+      name: manifests
+      referencePath:
+      - name: redis
+      version: 1.0.0

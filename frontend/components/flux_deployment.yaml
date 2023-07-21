@@ -1,0 +1,14 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: FluxDeployer
+metadata:
+  name: frontend-kustomization
+  namespace: ocm-system
+spec:
+  kustomizationTemplate:
+    prune: true
+    targetNamespace: default
+  sourceRef:
+    apiVersion: delivery.ocm.software/v1alpha1
+    kind: Configuration
+    name: frontend-configuration
+    namespace: ocm-system
