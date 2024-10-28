@@ -1,0 +1,6 @@
+## Append samples of your project ##
+resources:
+- ocmrepository.yaml
+- component.yaml
+- resource.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples
