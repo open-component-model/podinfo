@@ -9,7 +9,7 @@ spec:
   references:
     expand: true
   repository:
-    url: ghcr.io/skarlso/mpas-demo-component
+    url: ghcr.io/open-component-model/mpas-demo-component
   serviceAccountName: admin-account
   version:
     semver: 1.0.16
