@@ -1,4 +1,6 @@
-# Podinfo Helm Sample
+# Sample
+
+## Description
 
 This folder contains a component that has a HelmChart based Resource in it.
 It also contains a Localization object and a Resource.
@@ -16,3 +18,17 @@ The ocm-controller objects are defined in `localized-resource.yaml`, `repository
 Once this is done, we create a `HelmRelease` in `helm_release.yaml`. This object will
 point to the Localized resource object. Flux will fetch the linked Artifact and deploy
 the localized resources within.
+
+## Building the Component
+
+Create a transfer archive:
+
+```
+ocm add componentversions --create component.yaml
+```
+
+Transport it to the targeted repository:
+
+```
+ocm transfer component ./transport-archive ghcr.io/open-component-model/ocm-demo-localized
+```
