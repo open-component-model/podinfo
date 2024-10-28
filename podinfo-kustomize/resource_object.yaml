@@ -8,5 +8,5 @@ spec:
   resource:
     byReference:
       resource:
-        name: podinfo
+        name: manifests
   interval: 10m

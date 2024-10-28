@@ -8,7 +8,7 @@ spec:
   targetNamespace: default
   sourceRef:
     kind: Resource
-    name: podinfo
+    name: podinfo-resource
   path: "./podinfo"
   prune: true
   timeout: 1m

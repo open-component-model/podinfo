@@ -24,7 +24,7 @@ the localized resources within.
 Create a transfer archive:
 
 ```
-ocm add componentversions --create component.yaml
+ocm add componentversions --create components.yaml
 ```
 
 Transport it to the targeted repository:

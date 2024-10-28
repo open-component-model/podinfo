@@ -1,0 +1,2 @@
+# Kustomize Podinfo Demo Application
+
