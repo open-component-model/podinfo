@@ -7,6 +7,7 @@ spec:
   interval: 10m
   targetNamespace: default
   sourceRef:
+    apiVersion: delivery.ocm.software/v1alpha1 
     kind: Resource
     name: podinfo-resource
   path: "./podinfo"
