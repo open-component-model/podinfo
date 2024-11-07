@@ -5,8 +5,8 @@ metadata:
 spec:
   interval: 10m
   target:
-    kind: Resource
-    name: manifest-resource
+    kind: LocalizedResource
+    name: localized-manifest-resource
   config:
     kind: Resource
-    name: resource-configuration-instruction
+    name: manifests-configuration

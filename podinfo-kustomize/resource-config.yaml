@@ -9,5 +9,5 @@ spec:
         value: 2
       target:
         file:
-          path: podinfo/deployment.yaml
+          path: deployment.yaml
           value: spec.replicas

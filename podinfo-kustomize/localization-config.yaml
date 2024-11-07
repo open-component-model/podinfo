@@ -4,12 +4,13 @@ metadata:
   name: deployment-localization
 spec:
   rules:
-  - source:
-      resource:
-        name: image
-    target:
-      file:
-        path: podinfo/deployment.yaml
-        value: spec.template.spec.containers[0].image
-    transformation:
-      type: Repository
+  - yamlsubst:
+      source:
+        resource:
+          name: image
+      target:
+        file:
+          path: deployment.yaml
+          value: spec.template.spec.containers[0].image
+      transformation:
+        type: Repository
