@@ -1,9 +1,9 @@
 components:
 # -- product component
 - name: ocm.software/podinfo
-  version: 1.0.2
+  version: 1.0.4
   labels:
-  - name: ocm.software/labels/podinfo/purpose
+  - name: ocm.software/podinfo
     value:
       - kind: test 
         type: manual
@@ -34,7 +34,7 @@ components:
   provider:
     name: open-component-model
   labels:
-  - name: ocm.software/labels/podinfo/service
+  - name: ocm.software/podinfo
     value: backend
   resources:
   - name: config
@@ -72,7 +72,7 @@ components:
   provider:
     name: open-component-model
   labels:
-  - name: ocm.software/labels/podinfo/service
+  - name: ocm.software/podinfo
     value: frontend
   resources:
   - name: config
@@ -110,7 +110,7 @@ components:
   provider:
     name: open-component-model
   labels:
-  - name: ocm.software/labels/podinfo/service
+  - name: ocm.software/podinfo
     value: redis
   resources:
   - name: config

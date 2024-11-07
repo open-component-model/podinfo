@@ -17,6 +17,12 @@ components:
         type: file
         path: ./localization-config.yaml
         mediaType: text/plain
+    - name: manifests-configuration
+      type: ocm.configuration
+      input:
+        type: file
+        path: ./resource-config.yaml
+        mediaType: text/plain
     - name: image
       type: ociArtifact
       version: "1.0.0"

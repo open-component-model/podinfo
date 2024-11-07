@@ -1,0 +1,13 @@
+apiVersion: delivery.ocm.software/v1alpha1
+kind: Resource
+metadata:
+  labels:
+  name: resource-configuration-instruction
+spec:
+  componentRef:
+    name: podinfo-component
+  interval: 10m
+  resource:
+    byReference:
+      resource:
+        name: manifests-configuration

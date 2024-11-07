@@ -6,10 +6,7 @@ metadata:
 spec:
   component: ocm.software/podinfo
   interval: 10m0s
-  references:
-    expand: true
   repository:
-    url: ghcr.io/open-component-model/mpas-demo-component
-  serviceAccountName: admin-account
+    url: ghcr.io/open-component-model/podinfo
   version:
-    semver: 1.0.16
+    semver: 1.0.0
