@@ -8,4 +8,4 @@ spec:
   repositoryRef:
     name: podinfo-repository
     namespace: default
-  semver: ">=v1.0.3"
+  semver: ">=v1.0.5"

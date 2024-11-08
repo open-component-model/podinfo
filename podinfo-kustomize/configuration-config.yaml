@@ -6,8 +6,8 @@ spec:
   rules:
   - yamlsubst:
       source:
-        value: 2
+        value: Always # Todo, find something better to configure.
       target:
         file:
           path: deployment.yaml
-          value: spec.replicas
+          value: spec.template.spec.containers[0].imagePullPolicy
