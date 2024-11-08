@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://ocm.software/schemas/configuration-schema.yaml
 components:
 - name: github.com/open-component-model/podinfo-kustomize
-  version: "1.0.2"
+  version: "1.0.3"
   provider:
     name: ocm.software
   resources:
@@ -21,11 +21,11 @@ components:
       type: ocm.configuration
       input:
         type: file
-        path: ./resource-config.yaml
+        path: ./configuration-config.yaml
         mediaType: text/plain
     - name: image
       type: ociArtifact
-      version: "1.0.2"
+      version: "1.0.3"
       access:
         type: ociArtifact
         imageReference: ghcr.io/stefanprodan/podinfo:latest
