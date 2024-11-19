@@ -4,12 +4,13 @@ metadata:
   name: deployment-localization
 spec:
   rules:
-  - source:
-      resource:
-        name: image
-    target:
-      file:
-        path: values.yaml
-        value: image.repository
-    transformation:
-      type: Repository
+  - yamlsubst:
+      source:
+        resource:
+          name: image
+      target:
+        file:
+          path: values.yaml
+          value: image.repository
+      transformation:
+        type: Repository

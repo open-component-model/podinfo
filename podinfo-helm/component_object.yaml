@@ -3,9 +3,9 @@ kind: Component
 metadata:
   name: podinfo-component
 spec:
-  component: github.com/open-component-model/podinfo
+  component: github.com/open-component-model/podinfo-kustomize
   interval: 10m
   repositoryRef:
     name: podinfo-repository
     namespace: default
-  semver: v1.0.0
+  semver: ">=v1.0.5"

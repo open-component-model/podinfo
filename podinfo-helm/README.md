@@ -3,21 +3,15 @@
 ## Description
 
 This folder contains a component that has a HelmChart based Resource in it.
-It also contains a Localization object and a Resource.
+It also contains a Localization, Configuration and Resource objects.
 
 The localization config object can be found in `localization-config.yaml` file.
 
-This file describes how a configuration will happen. Where the configured object is and
+This file describes how a localization will happen. Where the localized object is and
 what file to look for.
 
-We fetch this config object and configure the `manifests-resource.yaml` object with it.
-
-The ocm-controller objects are defined in `localized-resource.yaml`, `repository-object.yaml` and
-`component-object.yaml`.
-
-Once this is done, we create a `HelmRelease` in `helm_release.yaml`. This object will
-point to the Localized resource object. Flux will fetch the linked Artifact and deploy
-the localized resources within.
+Further configuration is provided by the `configuration-config.yaml` file. This sets
+the `color` and a custom `message` for the generated UI.
 
 ## Building the Component
 

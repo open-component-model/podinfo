@@ -9,4 +9,4 @@ spec:
     name: manifest-resource
   config:
     kind: Resource
-    name: resource-localization-instruction
+    name: manifests-localization
