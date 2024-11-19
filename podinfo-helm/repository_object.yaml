@@ -4,6 +4,6 @@ metadata:
   name: podinfo-repository
 spec:
   repositorySpec:
-    baseUrl: ghcr.io/open-component-model/podinfo-kustomize
+    baseUrl: ghcr.io/open-component-model/podinfo-helm
     type: OCIRegistry
   interval: 10m

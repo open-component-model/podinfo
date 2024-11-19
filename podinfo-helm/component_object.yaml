@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: podinfo-component
 spec:
-  component: github.com/open-component-model/podinfo-kustomize
+  component: github.com/open-component-model/podinfo-helm
   interval: 10m
   repositoryRef:
     name: podinfo-repository
