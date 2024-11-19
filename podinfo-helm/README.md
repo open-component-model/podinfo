@@ -2,7 +2,7 @@
 
 ## Description
 
-This folder contains a component that has a HelmChart based Resource in it.
+This folder contains a component that has a HelmChart based component in it.
 It also contains a Localization, Configuration and Resource objects.
 
 The localization config object can be found in `localization-config.yaml` file.
@@ -24,5 +24,5 @@ ocm add componentversions --create components.yaml
 Transport it to the targeted repository:
 
 ```
-ocm transfer component ./transport-archive ghcr.io/open-component-model/ocm-demo-localized
+ocm transfer component ./transport-archive ghcr.io/open-component-model/podinfo-helm
 ```
